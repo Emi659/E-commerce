@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %} View Orders {% endblock %}
+
+
+{% block body %}
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+
+            <th scope="col">Orden ID</th>
+            
+
+            <th scope="col">username</th>
+            <th scope="col">Customer Email</th>
+
+            <th scope="col">Nombre del producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+
+            <th scope="col">Imagen</th>
+            <th scope="col">Status</th>
+            <th scope="col">Acción</th>
+
+
+
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for orden in ordenes %}
+
+        <tr>
+            <td>{{ orden.id }}</td>
+
+            <td>{{ orden.cliente.username }}</td>
+            <td>{{ orden.cliente.email }}</td>
+            <td>{{ orden.producto.nombre_producto }}</td>
+            <td>{{ orden.precio }}</td>
+            <td>{{ orden.cantidad }}</td>
+
+            <td><img src="{{ orden.producto.imagen_producto }}" alt="" style="height: 50px; width: 50px; border-radius: 2px;"></td>
+
+            <td>{{ orden.status}}</td>
+
+            <td>
+                <a href="/update-order/{{ orden.id }}">Actualizar Status</a>
+            </td>
+           
+
+
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

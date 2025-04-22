@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+
+{% block body %}
+<div class="container my-5">
+    <div class="row">
+        <h3 style="color: white;">Bienvenido <span class="text-capitalize">{{ cliente.username }}</span></h3>
+
+        <div class="col-sm-2 border-end" style="margin-top: 20px;">
+        
+            <ul class="list-unstyled">
+                <li class="d-grid"><a href="#" class="btn btn-primary">Perfil</a></li>
+                <li class="d-grid"><a href="/change-password/{{ cliente.id }}" class="btn btn-primary" style="margin-top: 5px;">Cambiar contraseña</a></li>
+
+            </ul>
+        
+        </div>
+
+        <div class="col-sm-5 offset-sm-1" style="background-color: white; border-radius: 18px; margin-top: 20px;">
+            <div class="row">
+
+                <div class="col-sm-8">
+                    <div class="card m-2">
+
+                        <h3>{{ cliente.username }}</h3>
+                        <p>Email: {{ cliente.email }}</p>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

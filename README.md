@@ -12,13 +12,13 @@ Plataforma integral de comercio electrónico desarrollada con **Python (Flask)**
 
 | Interfaz de Usuario (Frontend) | Arquitectura de Base de Datos (Backend) |
 | :---: | :---: |
-| ![Shopix Main](imgs/Interfaz.jpg) | ![Database](imgs/basedatos.png) |
+| ![Shopix Main](imgs/Interfaz.png) | ![Database](imgs/basedatos.png) |
 | *Catálogo dinámico y Dashboard de ventas* | *Estructura relacional y seguridad en HeidiSQL* |
 
 ## Stack Tecnológico
 * **Backend:** Python 3.10+ & Flask.
-* **Frontend:** HTML5, CSS3 (Bootstrap 5) y JavaScript.
-* **Base de Datos:** MariaDB(Gestión profesional vía HeidiSQL).
+* **Frontend:** HTML5, CSS3 y JavaScript.
+* **Base de Datos:** MariaDB(Gestión vía HeidiSQL).
 * **Seguridad:** Hashing de contraseñas mediante algoritmos **Scrypt** (Protección contra ataques de fuerza bruta).
 
 ## Detalles de Ingeniería (Backend)
